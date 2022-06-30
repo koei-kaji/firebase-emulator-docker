@@ -13,4 +13,5 @@ on:
 jobs:
   docker-check:
     uses: koei-kaji/reusable-github-actions/.github/workflows/docker-check.yaml@v0.1.0
-    working-directory: "."
+    with:
+      working-directory: "."
