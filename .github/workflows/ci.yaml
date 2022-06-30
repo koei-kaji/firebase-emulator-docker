@@ -1,11 +1,11 @@
 name: CI
+
 on:
   pull_request:
     branches:
       - main
-    paths:
-      - ".github/workflows/ci.yaml"
-      - "!**.md"
+    paths-ignore:
+      - "**.md"
   workflow_dispatch:
   schedule:
     - cron: "0 0 1 * *"
