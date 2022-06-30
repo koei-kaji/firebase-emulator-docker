@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - "**.md"
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 1 * *"
+
+jobs:
+  docker-check:
+    uses: koei-kaji/reusable-github-actions/.github/workflows/docker-check.yaml@v0.1.0
+    with:
+      working-directory: "."
