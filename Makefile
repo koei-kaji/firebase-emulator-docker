@@ -1,5 +1,5 @@
 
-DOCKER_TAG=firebase-emulator:0.1.0
+include default.env
 
 .PHONY: lint
 lint:
