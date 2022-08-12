@@ -12,6 +12,7 @@ on:
 
 jobs:
   docker-check:
-    uses: koei-kaji/reusable-github-actions/.github/workflows/docker-check.yaml@v1.0.1
+    uses: koei-kaji/reusable-github-actions/.github/workflows/docker-check.yaml@v1.1.0
     with:
       working-directory: "."
+      create-issue: true
