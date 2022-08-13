@@ -12,7 +12,7 @@ on:
 
 jobs:
   docker-check:
-    uses: koei-kaji/reusable-github-actions/.github/workflows/docker-check.yaml@v1.1.0
+    uses: koei-kaji/reusable-github-actions/.github/workflows/docker-check.yaml@v1.1.1
     with:
       working-directory: "."
       trivy-exit-code: 0 # FIXME: https://github.com/koei-kaji/firebase-emulator-docker/pull/2#issuecomment-1213277832
