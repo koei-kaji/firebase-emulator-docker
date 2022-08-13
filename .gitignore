@@ -1,0 +1,5 @@
+*.json
+!firebase.json
+
+*.rules
+!storage.rules
