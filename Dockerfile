@@ -6,8 +6,13 @@ ENV USERNAME=firebase
 WORKDIR /usr/firebase
 RUN apk update && apk add --no-cache \
     # https://pkgs.alpinelinux.org/packages
-    openjdk11-jre-headless=11.0.15_p10-r1 \
+    openjdk11-jre-headless=11.0.16_p8-r0 \
     bash=5.1.16-r2 \
+    # >>> update for vulnerabilities
+    libcrypto1.1=1.1.1q-r0 \
+    libssl1.1=1.1.1q-r0 \
+    zlib=1.2.12-r3 \
+    # <<< update for vulnerabilities
     && npm install --location=global npm@${NPM_VERSION} \
     && npm install -g \
     firebase-tools@${FIREBASE_TOOLS_VERSION} \

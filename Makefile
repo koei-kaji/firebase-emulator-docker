@@ -1,5 +1,5 @@
 
-DOCKER_TAG=firebase-emulator:0.1.0
+include default.env
 
 .PHONY: lint
 lint:
@@ -11,7 +11,8 @@ build:
 
 .PHONY: scan
 scan:
-	@dockle $(DOCKER_TAG)
+	@docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
+		goodwithtech/dockle:latest --no-color $(DOCKER_TAG)
 	@trivy image --ignore-unfixed $(DOCKER_TAG)
 
 pre-commit: lint build scan
